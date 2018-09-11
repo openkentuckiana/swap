@@ -10,7 +10,7 @@ init:
 	pipenv install --dev
 
 clean-local-dependencies:
-	-docker rm -f postgres-$(GIT_HASH)
+	docker rm -f postgres-$(GIT_HASH)
 
 local-dependencies: clean-local-dependencies
 	docker run -d --name postgres-$(GIT_HASH) -e POSTGRES_PASSWORD=pass postgres:9.6.5-alpine
@@ -19,3 +19,5 @@ run: local-dependencies
 	pipenv run \
 		swap/manage.py runserver \
 			--settings=swap.settings.local
+test:
+	pipenv run swap/manage.py test

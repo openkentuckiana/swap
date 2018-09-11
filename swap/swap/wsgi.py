@@ -13,8 +13,8 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-from os.path import abspath, dirname
 import os
+from os.path import abspath, dirname
 from sys import path
 
 # This application object is used by any WSGI server configured to use this
