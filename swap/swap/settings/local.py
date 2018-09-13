@@ -1,9 +1,5 @@
 """Development settings and globals."""
 
-from __future__ import absolute_import
-
-from os.path import join, normpath
-
 from .base import *
 
 ########## DEBUG CONFIGURATION
@@ -24,6 +20,6 @@ INSTALLED_APPS += ("debug_toolbar",)
 
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
-# http://django-debug-toolbar.readthedocs.org/en/latest/installation.html
-INTERNAL_IPS = ("127.0.0.1",)
+# This should NEVER be used outside of local.py
+INTERNAL_IPS = type(str("c"), (), {"__contains__": lambda *a: True})()
 ########## END TOOLBAR CONFIGURATION
