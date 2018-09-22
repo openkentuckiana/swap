@@ -1,31 +1,63 @@
-APP_NAME := "swap"
-IMAGE_NAME := "tbd/$(APP_NAME)"
-GIT_HASH := $(shell git rev-parse --short HEAD)
-GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
-GIT_TAG := $(shell git describe --tags)
+# Thanks to https://gist.github.com/miketheman/e17a9e5c6fedac4c34383931c01beb28
 
-# Probably deprecating this in favor of docker-compose, for cross-platform reasons.
-# Need to update Travis CI before this can go away.
+CURRENT_DIRECTORY := $(shell pwd)
 
-init:
-	WORKON_HOME=./.venv/ \
-	pipenv install --dev
+help:
+	@echo "Docker Compose Help"
+	@echo "-----------------------"
+	@echo ""
+	@echo "Run tests to ensure current state is good:"
+	@echo "    make test"
+	@echo ""
+	@echo "If tests pass, add fixture data and start up the app:"
+	@echo "    make begin"
+	@echo ""
+	@echo "Really, really start over:"
+	@echo "    make clean"
+	@echo ""
+	@echo "See contents of Makefile for more targets."
 
-clean-local-dependencies:
-	docker rm -f /postgres-$(GIT_HASH)
+begin: migrate fixtures start
 
-local-dependencies: clean-local-dependencies
-	docker run -d \
-		--name postgres-$(GIT_HASH) \
-		-e POSTGRES_PASSWORD=pass postgres:9.6.5-alpine
+start:
+	@docker-compose up -d
+	@echo "Ready at http://localhost/"
+
+stop:
+	@docker-compose stop
+
+status:
+	@docker-compose ps
+
+restart: stop start
+
+clean: stop
+	@docker-compose rm --force
+	@docker-compose down --volumes
+	@find . -name \*.pyc -delete
+
+build:
+	@docker-compose build app
+
+test: 
+	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py test --keepdb
+
+makemigrations:
+	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py makemigrations
 
 migrate:
-	pipenv run \
-		swap/manage.py migrate
+	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py migrate
 
-run: local-dependencies migrate
-	pipenv run \
-		swap/manage.py runserver \
-			--settings=swap.settings.local
-test:
-	pipenv run swap/manage.py test
+fixtures:
+	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- ./load-all-fixtures.sh
+
+flushdb:
+	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py flushdb
+
+cli:
+	@docker-compose run --rm app bash
+
+tail:
+	@docker-compose logs -f
+
+.PHONY: start stop status restart clean build test makemigrations migrate fixtures flushdb cli tail

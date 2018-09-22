@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "maintenance_mode",
+    "districts",
+    "noauth",
 ]
 
 MIDDLEWARE = [
@@ -47,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "maintenance_mode.middleware.MaintenanceModeMiddleware",
 ]
 
 ROOT_URLCONF = "swap.urls"
@@ -69,14 +75,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "swap.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": "swap",
+        "USER": "postgres",
+        "PASSWORD": "pass",
+        "HOST": "db",
+        "PORT": "5432",
     }
 }
 
@@ -114,4 +123,15 @@ USE_TZ = True
 STATIC_URL = "/dj-static/"
 
 # User registration
-ACCOUNT_ACTIVATION_DAYS = 3
+AUTH_USER_MODEL = "noauth.User"
+NOAUTH_CODE_TTL_MINUTES = 10
+
+
+def get_env_variable(var_name, default=None):
+    """Get the environment variable or return exception."""
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        if default:
+            return default
+        raise ImproperlyConfigured(f"Set the {var_name} environment variable")

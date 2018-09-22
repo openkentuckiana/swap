@@ -22,16 +22,20 @@ Download the [Mac](https://store.docker.com/editions/community/docker-ce-desktop
 Note that for Windows, Docker requires 64bit Windows 10 Pro, Enterprise, or Education, and Docker also requires that virtualization be enabled. Check out the [what to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) document for more info. It is competely possible to run Swap without Docker, and we can work on documentation and scripts to make that process easier if we have contributors who can't run Docker. Docker is just handy because it makes it so developers don't have to install or manage installations, and because it mimicks the production environment.
 
 ### Running the App
-Open a terminal (Terminal on Mac, Command Prompt or PowerShell on Windows), navigate to the Swap directory, and run this command: `docker-compose up --build`.
+Open a terminal (Terminal on Mac, Command Prompt or PowerShell on Windows), navigate to the Swap directory, and run this command: `make begin`.
 
-This command will start the application in debug mode, a Postgres database instance, and nginx (a web server). Each of these runs in its own container, and you'll see output from the containers. Each line will start with the container name (e.g. `app_1`).
+This command will start the application in debug mode, a Postgres database instance, and nginx (a web server). Each of these runs in its own container, which you'll see start. `make begin` will also set up the database by running [migrations](https://docs.djangoproject.com/en/2.1/topics/migrations/) and installing [fixtures](https://docs.djangoproject.com/en/2.1/howto/initial-data/#providing-data-with-fixtures).
 
-After the command has stopped generating output, you can view Swap app by going to [http://localhost](http://localhost) in your browser.
+You can view the site by going to [http://localhost/](http://localhost/) in your browser.
+
+You can log into the admin site by going to [http://localhost/admin/](http://localhost/admin/) and logging in with the username `admin` and the password `pass` (this user is created via the fixtures in the `noauth` app).
 
 ### Stoping the App
-To shut down the Docker containers started by `docker-compose up`, you can simply press `Ctrl-C`/`Command-C`. This will shut down the containers and return you to the command prompt.
+To stop the app, run `make stop`.
 
-When you're making changes to Django files, the app will automatically restart so you can see you changes without shutting the Docker containers down. If Django encounters a fatal error, you will need to fix it and restart the containers.
+### Viewing Logs
+To view logs, run `make tail`.
+If you want to start the app and automatically show logs, you can combine the `begin` and `tail` commands: `make begin tail`.
 
 Advanced Topics
 -----------------
