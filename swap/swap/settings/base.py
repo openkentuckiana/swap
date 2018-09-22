@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -80,7 +82,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": "swap",
-        "USER": "user",
+        "USER": "postgres",
         "PASSWORD": "pass",
         "HOST": "db",
         "PORT": "5432",
@@ -123,3 +125,13 @@ STATIC_URL = "/dj-static/"
 # User registration
 AUTH_USER_MODEL = "noauth.User"
 NOAUTH_CODE_TTL_MINUTES = 10
+
+
+def get_env_variable(var_name, default=None):
+    """Get the environment variable or return exception."""
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        if default:
+            return default
+        raise ImproperlyConfigured(f"Set the {var_name} environment variable")

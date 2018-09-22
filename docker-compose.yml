@@ -4,7 +4,7 @@ services:
     image: mdillon/postgis:10
     environment:
       POSTGRES_DB: swap
-      POSTGRES_USER: user
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pass
     ports:
       - "5432:5432"
@@ -23,8 +23,6 @@ services:
       - main
     depends_on:
       - db
-    stdin_open: true
-    tty: true
   nginx:
     image: nginx
     volumes:
