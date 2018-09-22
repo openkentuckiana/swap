@@ -1,0 +1,7 @@
+- model: districts.district
+  pk: 1
+  fields: {name: Test District, email_domain: example.com, uri: 'https://example.com',
+    deleted: false}
+- model: districts.building
+  pk: 2
+  fields: {name: Building 1, address: 123 Main St., location: null, district: 1, deleted: false}

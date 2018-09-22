@@ -23,3 +23,5 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 # This should NEVER be used outside of local.py
 INTERNAL_IPS = type(str("c"), (), {"__contains__": lambda *a: True})()
 ########## END TOOLBAR CONFIGURATION
+
+NOAUTH_ALLOWED_EMAILS = ["test@example.com"]
