@@ -3,5 +3,9 @@ sudo: required
 services:
   - docker
 
+before_script:
+  - sudo service mysql stop
+  - sudo service postgresql stop
+
 script:
   - make test
