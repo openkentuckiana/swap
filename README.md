@@ -7,7 +7,7 @@ Swap - Collaboraive Educator Marketplace
 
 About
 -----------------
-Swap (name TBD) is an web app to help teachers find, offload, and exchange supplies. Because teachers often have shifting needs, they end up having extra supplies or needing supplies that they don't have. We want to create an educator-only marketplace where teachers can swap supplies.
+Swap (name TBD) is a web app to help teachers find, offload, and exchange supplies. Because teachers often have shifting needs, they end up having extra supplies or needing supplies that they don't have. We want to create an educator-only marketplace where teachers can swap supplies.
 
 Getting up and running
 -----------------
