@@ -1,6 +1,10 @@
 Swap - Collaboraive Educator Marketplace
 ===============
 
+[![Build Status](https://travis-ci.com/craving-exponent/swap.svg?token=SpHpFMasorhC4oT8tCio&branch=master)](https://travis-ci.com/craving-exponent/swap)
+
+[![codecov](https://codecov.io/gh/craving-exponent/swap/branch/master/graph/badge.svg?token=0nA3LW7RQO)](https://codecov.io/gh/craving-exponent/swap)
+
 About
 -----------------
 Swap (name TBD) is an web app to help teachers find, offload, and exchange supplies. Because teachers often have shifting needs, they end up having extra supplies or needing supplies that they don't have. We want to create an educator-only marketplace where teachers can swap supplies.

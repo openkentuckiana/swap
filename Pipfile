@@ -11,6 +11,8 @@ pytz = "==2018.5"
 
 [dev-packages]
 black = "==18.6b4"
+coverage = "*"
+codecov = "*"
 django-debug-toolbar = "==1.10"
 isort = "*"
 mock = "*"
