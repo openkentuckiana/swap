@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.utils.translation import gettext as _
+from hamcrest import assert_that, has_key
 
 from districts.models import District
-from hamcrest import *
 
 from .forms import CodeForm, LoginForm
 
@@ -46,7 +46,7 @@ class LoginFormTests(TestCase):
     def test_unknown_email_domain_error_message(self):
         data = {"email": "jane@unknown.com"}
         form = LoginForm(data)
-        response = self.client.post(reverse("login"), data)
+        response = self.client.post(reverse("noauth:login"), data)
         self.assertFormError(
             response,
             "form",
@@ -73,7 +73,7 @@ class LoginFormTests(TestCase):
             deleted=True,
         )
         data = {"email": "jane@example3.com"}
-        response = self.client.post(reverse("login"), data)
+        response = self.client.post(reverse("noauth:login"), data)
         self.assertFormError(
             response,
             "form",

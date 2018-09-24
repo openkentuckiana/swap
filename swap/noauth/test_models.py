@@ -1,9 +1,7 @@
 from django.test import TestCase, override_settings
-from django.urls import reverse
-from django.utils.translation import gettext as _
+from hamcrest import assert_that, equal_to, none
 
 from districts.models import District
-from hamcrest import *
 
 from .models import DEFAULT_CODE_LENGTH, AuthCode, User
 

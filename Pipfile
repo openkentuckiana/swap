@@ -6,14 +6,16 @@ name = "pypi"
 [packages]
 django = "==2.1.1"
 django-maintenance-mode = "==0.10.0"
-pytz = "==2018.5"
 psycopg2-binary = "*"
+pytz = "==2018.5"
 
 [dev-packages]
 black = "==18.6b4"
 django-debug-toolbar = "==1.10"
 isort = "*"
+mock = "*"
 pre-commit = "==1.11.0"
 PyHamcrest = "*"
+
 [requires]
 python_version = "3.7"
