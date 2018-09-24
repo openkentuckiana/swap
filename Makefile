@@ -1,7 +1,7 @@
 # Thanks to https://gist.github.com/miketheman/e17a9e5c6fedac4c34383931c01beb28
 
 CURRENT_DIRECTORY := $(shell pwd)
-GIT_SHA := $(shell git rev-parse --abbrev-ref HEAD)
+GIT_SHA := $(shell git rev-parse HEAD)
 
 help:
 	@echo "Docker Compose Help"
@@ -44,7 +44,7 @@ test:
 	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py test --keepdb
 
 testwithcoverage: build 
-	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test GIT_SHA=$GIT_SHA --rm app bash -c "./wait-for-it.sh db:5432 --timeout=60 -- coverage run --source='.' ./manage.py test --keepdb && codecov --commit=$$GIT_SHA"
+	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test -e GIT_SHA=$(GIT_SHA) --rm app bash -c "./wait-for-it.sh db:5432 --timeout=60 -- coverage run --source='.' ./manage.py test --keepdb && codecov --commit=$(GIT_SHA)"
 
 makemigrations:
 	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py makemigrations
