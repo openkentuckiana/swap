@@ -2,6 +2,7 @@
 
 CURRENT_DIRECTORY := $(shell pwd)
 GIT_SHA := $(shell git rev-parse HEAD)
+CODECOV_TOKEN = := $(CODECOV_TOKEN)
 
 help:
 	@echo "Docker Compose Help"
@@ -44,7 +45,7 @@ test:
 	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py test --keepdb
 
 testwithcoverage: build 
-	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test -e GIT_SHA=$(GIT_SHA) --rm app bash -c "./wait-for-it.sh db:5432 --timeout=60 -- coverage run --source='.' ./manage.py test --keepdb && codecov --commit=$(GIT_SHA)"
+	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test -e GIT_SHA=$(GIT_SHA) -e CODECOV_TOKEN=$(CODECOV_TOKEN) --rm app bash -c "./wait-for-it.sh db:5432 --timeout=60 -- coverage run --source='.' ./manage.py test --keepdb && codecov --commit=$(GIT_SHA)"
 
 makemigrations:
 	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py makemigrations
