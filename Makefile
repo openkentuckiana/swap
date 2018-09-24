@@ -42,6 +42,9 @@ build:
 test: 
 	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py test --keepdb
 
+testwithcoverage: build 
+	@docker-compose run -e DJANGO_SETTINGS_MODULE=swap.settings.test --rm app bash -c "./wait-for-it.sh db:5432 --timeout=60 -- coverage run --source='.' ./manage.py test --keepdb && codecov"
+
 makemigrations:
 	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py makemigrations
 
