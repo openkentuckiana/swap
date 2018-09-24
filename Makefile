@@ -2,7 +2,6 @@
 
 CURRENT_DIRECTORY := $(shell pwd)
 GIT_SHA := $(shell git rev-parse HEAD)
-CODECOV_TOKEN = := $(CODECOV_TOKEN)
 
 help:
 	@echo "Docker Compose Help"
