@@ -7,6 +7,8 @@ from django.db import models
 
 from districts.models import District
 
+DEFAULT_CODE_LENGTH = 6
+
 
 class User(AbstractUser):
     district = models.ForeignKey(District, on_delete=models.CASCADE)
@@ -40,5 +42,5 @@ class AuthCode(models.Model):
 
     @classmethod
     def generate_code(cls):
-        code_length = getattr(settings, "NOAUTH_CODE_LENGTH", 6)
+        code_length = getattr(settings, "NOAUTH_CODE_LENGTH", DEFAULT_CODE_LENGTH)
         return "".join(choice(string.digits) for i in range(code_length))

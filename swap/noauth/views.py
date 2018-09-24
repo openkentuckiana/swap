@@ -26,10 +26,9 @@ class CodeView(View):
         code = self.request.GET.get("code")
 
         if email and code:
-            try:
-                return self._validate_and_redirect(email, code)
-            except:
-                pass
+            next_page = self._validate_and_redirect(email, code)
+            if next_page:
+                return redirect(next_page)
 
         form = self.form_class(initial={"email": email})
         return render(request, self.template_name, {"form": form})
@@ -39,35 +38,38 @@ class CodeView(View):
         if form.is_valid():
             email = form.cleaned_data["email"]
             code = form.cleaned_data["code"]
-            try:
-                return self._validate_and_redirect(email, code)
-            except:
-                form.add_error(
-                    None,
-                    ValidationError(
-                        _("Invalid e-mail address or code."),
-                        code="invalid_email_or_code",
-                    ),
-                )
+            next_page = self._validate_and_redirect(email, code)
+            if next_page:
+                return redirect(next_page)
+
+            form.add_error(
+                None,
+                ValidationError(
+                    _("Invalid e-mail address or code."), code="invalid_email_or_code"
+                ),
+            )
 
         return render(request, self.template_name, {"form": form})
 
     def _validate_and_redirect(self, email, code):
-        valid_timestamp_start = timezone.now() - datetime.timedelta(
-            minutes=getattr(settings, "NOAUTH_CODE_TTL_MINUTES", 5)
-        )
-        auth_code = AuthCode.objects.get(
-            user__username=email, code=code, timestamp__gte=valid_timestamp_start
-        )
+        try:
+            valid_timestamp_start = timezone.now() - datetime.timedelta(
+                minutes=getattr(settings, "NOAUTH_CODE_TTL_MINUTES", 5)
+            )
+            auth_code = AuthCode.objects.get(
+                user__username=email, code=code, timestamp__gte=valid_timestamp_start
+            )
+        except ObjectDoesNotExist:
+            return None
         next_page = auth_code.next_page
         auth_code.delete()
-        return redirect(next_page or "/")
+        return next_page or "/"
 
 
 class LoginView(FormView):
     template_name = "login.html"
     form_class = LoginForm
-    success_url = reverse_lazy("code")
+    success_url = reverse_lazy("noauth:code")
 
     def form_valid(self, form):
         email = form.cleaned_data["email"]

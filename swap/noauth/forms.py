@@ -9,10 +9,11 @@ class LoginForm(forms.Form):
     email = forms.EmailField(label="Work email", max_length=100)
 
     def clean_email(self):
+        """Only accept e-mails whose domain matches an active dictrict's email domain"""
         email = self.cleaned_data["email"]
         domain = email.split("@")[1]
         try:
-            self.district = District.objects.get(email_domain=domain)
+            self.district = District.objects.get(email_domain=domain, deleted=False)
         except ObjectDoesNotExist:
             raise forms.ValidationError(
                 _("Your email domain is not authorized to sign into this site.")
