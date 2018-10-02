@@ -1,3 +1,6 @@
+import string
+from secrets import choice
+
 from django.conf import settings
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
@@ -96,7 +99,9 @@ class LoginView(FormView):
             return super().form_invalid(form)
 
     def create_user(self, email, district):
-        return User.objects.create_user(email, email, "NOPE", district=district)
+        # password should never be used by a user to log in. Just make it long and random.
+        password = "".join(choice(string.ascii_letters + string.digits) for i in range(50))
+        return User.objects.create_user(email, email, password, district=district)
 
     def get_user(self, email):
         try:
