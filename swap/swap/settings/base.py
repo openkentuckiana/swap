@@ -14,6 +14,20 @@ import os
 
 from django.core.exceptions import ImproperlyConfigured
 
+
+def get_env_variable(var_name, default=None):
+    """Get the environment variable or return exception."""
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        if default:
+            return default
+        raise ImproperlyConfigured(f"Set the {var_name} environment variable")
+
+
+SITE_NAME = get_env_variable("SITE_NAME", "Swap")
+SITE_URL = get_env_variable("SITE_URL", "https://swapsite.com/")
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -123,15 +137,6 @@ USE_TZ = True
 STATIC_URL = "/dj-static/"
 
 # User registration
+DEFAULT_FROM_EMAIL = get_env_variable("DEFAULT_FROM_EMAIL", "admin@swapsite.com")
 AUTH_USER_MODEL = "noauth.User"
 NOAUTH_CODE_TTL_MINUTES = 10
-
-
-def get_env_variable(var_name, default=None):
-    """Get the environment variable or return exception."""
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        if default:
-            return default
-        raise ImproperlyConfigured(f"Set the {var_name} environment variable")

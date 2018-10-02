@@ -1,11 +1,7 @@
-import datetime
-
 from django.conf import settings
-from django.core.exceptions import ObjectDoesNotExist
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
-from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 from django.views.generic.edit import FormView
@@ -13,7 +9,7 @@ from django.views.generic.edit import FormView
 from noauth.models import AuthCode
 
 from .forms import CodeForm, LoginForm
-from .models import User
+from .models import AuthCode, User
 
 
 class CodeView(View):
@@ -51,38 +47,42 @@ class CodeView(View):
 
         return render(request, self.template_name, {"form": form})
 
-    def _validate_and_redirect(self, email, code):
-        try:
-            valid_timestamp_start = timezone.now() - datetime.timedelta(
-                minutes=getattr(settings, "NOAUTH_CODE_TTL_MINUTES", 5)
-            )
-            auth_code = AuthCode.objects.get(
-                user__username=email, code=code, timestamp__gte=valid_timestamp_start
-            )
-        except ObjectDoesNotExist:
+    @classmethod
+    def _validate_and_redirect(cls, email, code):
+        auth_code = AuthCode.get_auth_code(email, code)
+        if not auth_code:
             return None
-        next_page = auth_code.next_page
         auth_code.delete()
-        return next_page or "/"
+        return auth_code.next_page or "/"
 
 
 class LoginView(FormView):
+    """Handled the login form where users enter their email addresses to start the login process.
+    After entering an email address, the user will be sent a log in link and code they can use to log in without a password.
+    If a user doesn't exist, a user is created."""
+
     template_name = "login.html"
     form_class = LoginForm
     success_url = reverse_lazy("noauth:code")
 
     def form_valid(self, form):
         email = form.cleaned_data["email"]
-        district = form.district
+        district = form.cleaned_data["district"]
         user = self.get_user(email)
         if not user:
             user = self.create_user(email, district)
 
-        AuthCode.create_code_for_user(user)
-
-        self.success_url += f"?email={user.username}"
-
-        return super().form_valid(form)
+        if AuthCode.send_auth_code(user):
+            self.success_url += f"?email={user.username}"
+            return super().form_valid(form)
+        else:
+            form.add_error(
+                None,
+                _(
+                    f"Please check your inbox and spam folder for a previously-sent code."
+                ),
+            )
+            return super().form_invalid(form)
 
     def create_user(self, email, district):
         return User.objects.create_user(email, email, "NOPE", district=district)

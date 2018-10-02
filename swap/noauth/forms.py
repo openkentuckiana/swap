@@ -13,7 +13,9 @@ class LoginForm(forms.Form):
         email = self.cleaned_data["email"]
         domain = email.split("@")[1]
         try:
-            self.district = District.objects.get(email_domain=domain, deleted=False)
+            self.cleaned_data["district"] = District.objects.get(
+                email_domain=domain, deleted=False
+            )
         except ObjectDoesNotExist:
             raise forms.ValidationError(
                 _("Your email domain is not authorized to sign into this site.")
