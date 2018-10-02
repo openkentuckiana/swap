@@ -13,6 +13,11 @@ from .models import AuthCode, User
 
 
 class CodeView(View):
+    """
+    Handles the code form where the user enters their email address and code to authenticate.
+    Accepts values either via querystring in a GET or in a form POST.
+    """
+
     form_class = CodeForm
     template_name = "code.html"
     success_url = "/"
@@ -22,7 +27,7 @@ class CodeView(View):
         code = self.request.GET.get("code")
 
         if email and code:
-            next_page = self._validate_and_redirect(email, code)
+            next_page = self._validate_and_get_redirect_uri(email, code)
             if next_page:
                 return redirect(next_page)
 
@@ -34,7 +39,7 @@ class CodeView(View):
         if form.is_valid():
             email = form.cleaned_data["email"]
             code = form.cleaned_data["code"]
-            next_page = self._validate_and_redirect(email, code)
+            next_page = self._validate_and_get_redirect_uri(email, code)
             if next_page:
                 return redirect(next_page)
 
@@ -48,7 +53,13 @@ class CodeView(View):
         return render(request, self.template_name, {"form": form})
 
     @classmethod
-    def _validate_and_redirect(cls, email, code):
+    def _validate_and_get_redirect_uri(cls, email, code):
+        """
+        Validates an code and returns a URI to redirect to, if the code is valid.
+        :param email: The email address associated with the auth code.
+        :param code: The code associated with the auth code.
+        :return: A URI to redirect to if the code is valid, otherwise None.
+        """
         auth_code = AuthCode.get_auth_code(email, code)
         if not auth_code:
             return None
@@ -57,7 +68,7 @@ class CodeView(View):
 
 
 class LoginView(FormView):
-    """Handled the login form where users enter their email addresses to start the login process.
+    """Handles the login form where users enter their email addresses to start the login process.
     After entering an email address, the user will be sent a log in link and code they can use to log in without a password.
     If a user doesn't exist, a user is created."""
 
@@ -79,7 +90,7 @@ class LoginView(FormView):
             form.add_error(
                 None,
                 _(
-                    f"Please check your inbox and spam folder for a previously-sent code."
+                    "Please check your inbox and spam folder for a previously-sent code."
                 ),
             )
             return super().form_invalid(form)
