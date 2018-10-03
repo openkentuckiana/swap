@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pipenv run black swap/
+pipenv run isort -rc --atomic swap
+git add .

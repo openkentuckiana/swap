@@ -19,6 +19,7 @@ help:
 	@echo "See contents of Makefile for more targets."
 
 begin: migrate fixtures start
+	git config core.hooksPath .githooks
 
 start:
 	@docker-compose up -d

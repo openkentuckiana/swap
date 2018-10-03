@@ -39,6 +39,12 @@ To stop the app, run `make stop`.
 To view logs, run `make tail`.
 If you want to start the app and automatically show logs, you can combine the `begin` and `tail` commands: `make begin tail`.
 
+Contributing
+-----------------
+If you would like to contribute to this codebase, you need to have a couple of additional Python libraries installed on your machine: [`isort`](https://pypi.org/project/isort/) and [`black`](https://github.com/ambv/black). These libraries are used to do some code formatting during `git commit`.
+
+You can install both of these libraries by running `pipenv install --dev` from your shell in the `swap` directory. If you don't have `pipenv` installed, you can install it by following the [installation instructions](https://pipenv.readthedocs.io/en/latest/#install-pipenv-today).
+
 Advanced Topics
 -----------------
 ### Debugging via `pdb`

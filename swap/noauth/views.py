@@ -100,7 +100,9 @@ class LoginView(FormView):
 
     def create_user(self, email, district):
         # password should never be used by a user to log in. Just make it long and random.
-        password = "".join(choice(string.ascii_letters + string.digits) for i in range(50))
+        password = "".join(
+            choice(string.ascii_letters + string.digits) for i in range(50)
+        )
         return User.objects.create_user(email, email, password, district=district)
 
     def get_user(self, email):
