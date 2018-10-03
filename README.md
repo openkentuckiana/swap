@@ -1,7 +1,7 @@
 Swap - Collaboraive Educator Marketplace
 ===============
 
-[![Build Status](https://travis-ci.com/craving-exponent/swap.svg?token=SpHpFMasorhC4oT8tCio&branch=master)](https://travis-ci.com/craving-exponent/swap) [![codecov](https://codecov.io/gh/craving-exponent/swap/branch/master/graph/badge.svg?token=0nA3LW7RQO)](https://codecov.io/gh/craving-exponent/swap)
+[![Build Status](https://travis-ci.com/craving-exponent/swap.svg?token=SpHpFMasorhC4oT8tCio&branch=master)](https://travis-ci.com/craving-exponent/swap) [![codecov](https://codecov.io/gh/codeforkentuckiana/swap/branch/master/graph/badge.svg?token=0nA3LW7RQO)](https://codecov.io/gh/codeforkentuckiana/swap)
 
 About
 -----------------
