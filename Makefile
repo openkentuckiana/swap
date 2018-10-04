@@ -18,7 +18,7 @@ help:
 	@echo ""
 	@echo "See contents of Makefile for more targets."
 
-begin: migrate fixtures start
+begin: makemigrations migrate fixtures start
 	git config core.hooksPath .githooks
 
 start:
@@ -57,7 +57,7 @@ fixtures:
 	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- ./load-all-fixtures.sh
 
 flushdb:
-	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py flushdb
+	@docker-compose run --rm app ./wait-for-it.sh db:5432 --timeout=60 -- python ./manage.py flush
 
 cli:
 	@docker-compose run --rm app bash

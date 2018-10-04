@@ -1,5 +1,5 @@
 #!/bin/bash
-./manage.py loaddata $(find . -type f -name 'local.yaml' | grep fix | sed ':a;N;$!ba;s/\n/ /g')
+./manage.py loaddata $(find . -type f -name '*.yaml' | grep fix | sed ':a;N;$!ba;s/\n/ /g')
 
 # MIT License
 
