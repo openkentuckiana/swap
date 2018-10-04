@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==2.1.1"
+django = "==2.1.2"
 django-localflavor = "==2.1"
 django-maintenance-mode = "==0.10.0"
 freezegun = "*"
