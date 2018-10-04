@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b68ac98ff60c3412491131c20e269602f52dd9f3fc5007a18db39b80a40cf0e7"
+            "sha256": "42f7d883715baac00fc6e555af91e44048cf2e60e195f4fe2190f582e7684012"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,14 @@
             ],
             "index": "pypi",
             "version": "==2.1.1"
+        },
+        "django-localflavor": {
+            "hashes": [
+                "sha256:0cee94c4b8f0214a5ba7be7e935019a8c062f4e7726d1df4b1e453cb812b2039",
+                "sha256:12ce98b13adcd68bb4babcd937d0ae5a0fd5801f71acaf9a6bf1784c218ef53c"
+            ],
+            "index": "pypi",
+            "version": "==2.1"
         },
         "django-maintenance-mode": {
             "hashes": [
@@ -264,10 +272,10 @@
         },
         "pbr": {
             "hashes": [
-                "sha256:1b8be50d938c9bb75d0eaf7eda111eec1bf6dc88a62a6412e33bf077457e0f45",
-                "sha256:b486975c0cafb6beeb50ca0e17ba047647f229087bd74e37f4a7e2cac17d2caa"
+                "sha256:1be135151a0da949af8c5d0ee9013d9eafada71237eb80b3ba8896b4f12ec5dc",
+                "sha256:cf36765bf2218654ae824ec8e14257259ba44e43b117fd573c8d07a9895adbdd"
             ],
-            "version": "==4.2.0"
+            "version": "==4.3.0"
         },
         "pre-commit": {
             "hashes": [

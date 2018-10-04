@@ -1,15 +1,12 @@
 from django.contrib import admin
+from django.contrib.gis.admin import OSMGeoAdmin
 
 from .models import Building, District
 
 
-class DistrictAdmin(admin.ModelAdmin):
-    pass
+class BuildingAdmin(OSMGeoAdmin):
+    modifiable = False
 
 
-class BuildingAdmin(admin.ModelAdmin):
-    pass
-
-
-admin.site.register(District, DistrictAdmin)
+admin.site.register(District, admin.ModelAdmin)
 admin.site.register(Building, BuildingAdmin)
