@@ -1,0 +1,21 @@
+{
+  "name": "swap",
+  "scripts": {
+  },
+  "env": {
+    "SECRET_KEY": {
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
