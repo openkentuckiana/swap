@@ -4,11 +4,12 @@ from __future__ import absolute_import
 
 from os import environ
 
-# Normally you should not import ANYTHING from Django directly
-# into your settings, but ImproperlyConfigured is an exception.
-from django.core.exceptions import ImproperlyConfigured
+import django_heroku
 
 from .base import *
+
+django_heroku.settings(locals())
+
 
 DEBUG = False
 
@@ -42,16 +43,10 @@ EMAIL_USE_TLS = True
 SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
-########## DATABASE CONFIGURATION
-DATABASES = {}
-########## END DATABASE CONFIGURATION
-
-
 ########## CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
 CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
 ########## END CACHE CONFIGURATION
-
 
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
