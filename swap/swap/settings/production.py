@@ -20,6 +20,8 @@ def get_env_setting(setting):
         raise ImproperlyConfigured(error_msg)
 
 
+DEBUG = False
+
 ########## HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
 ALLOWED_HOSTS = []
