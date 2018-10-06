@@ -7,7 +7,7 @@ build:
     web: Dockerfile
 release:
   command:
-    - pipenv run ./manage.py migrate
+    - ./manage.py migrate
   image: web
 run:
   web: gunicorn swap.wsgi --access-logfile -
