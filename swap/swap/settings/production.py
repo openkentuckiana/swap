@@ -23,7 +23,7 @@ def get_env_setting(setting):
 DEBUG = False
 
 ########## HOST CONFIGURATION
-ALLOWED_HOSTS = ["*.herokuapp.com"]
+ALLOWED_HOSTS = [".herokuapp.com"]
 ########## END HOST CONFIGURATION
 
 ########## EMAIL CONFIGURATION
