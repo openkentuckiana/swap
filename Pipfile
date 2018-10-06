@@ -8,6 +8,7 @@ django = "==2.1.2"
 django-localflavor = "==2.1"
 django-maintenance-mode = "==0.10.0"
 freezegun = "*"
+pillow = "==5.3.0"
 psycopg2-binary = "*"
 pytz = "==2018.5"
 
