@@ -6,4 +6,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn swap.wsgi --access-logfile -
+  web: gunicorn swap.wsgi --access-logfile - --error-logfile - --log-file -
