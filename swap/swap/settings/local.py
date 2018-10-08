@@ -25,3 +25,6 @@ INTERNAL_IPS = type(str("c"), (), {"__contains__": lambda *a: True})()
 ########## END TOOLBAR CONFIGURATION
 
 NOAUTH_ALLOWED_EMAILS = ["test@example.com"]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = "/tmp/"

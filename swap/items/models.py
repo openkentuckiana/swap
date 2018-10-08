@@ -1,25 +1,110 @@
+import datetime
 import string
+import sys
+import uuid
+from io import BytesIO
 from random import choices
 
+from django.conf import settings
+from django.contrib.postgres.fields import ArrayField
+from django.core.exceptions import ValidationError
+from django.core.files.base import ContentFile
+from django.core.files.storage import default_storage
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
+from django.db.models.signals import post_delete
 from django.utils.text import slugify
+from django.utils.translation import gettext_lazy as _
+from PIL import Image
+
+
+def generate_file_path(instance, filename):
+    """Generates a file upload path."""
+    return f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{filename}'
+
+
+def delete_thumbnails(sender, instance, using, **kwargs):
+    """Post-delete signal handler to delete thumbnail images."""
+    for size in instance.thumbnail_sizes:
+        default_storage.delete(f"{instance.image.name.split('.')[0]}-{size}.jpg")
+
+
+post_delete.connect(delete_thumbnails)
 
 
 class ItemImage(models.Model):
-    image = models.ImageField(height_field="height", width_field="width")
-    item = models.ForeignKey("Item", blank=True, null=True, on_delete=models.SET_NULL)
-    height = models.PositiveIntegerField()
-    width = models.PositiveIntegerField()
-    deleted = models.BooleanField(default=False)
+    image = models.ImageField(upload_to=generate_file_path)
+    item = models.ForeignKey("Item", on_delete=models.CASCADE)
+    full_size_height = models.PositiveIntegerField(default=0)
+    full_size_width = models.PositiveIntegerField(default=0)
+    thumbnail_sizes = ArrayField(models.SmallIntegerField(), blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.image.name} - {self.item.name}"
+
+    def clean_fields(self, exclude=None):
+        super().clean_fields(exclude=exclude)
+        if self.image.height < 200 or self.image.width < 500:
+            raise ValidationError(
+                _(
+                    "Images must be over 200 pixels tall and wide. Please upload a larger image."
+                )
+            )
+
+    def save(self, *args, **kwargs):
+        file_path = f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{str(uuid.uuid4())}'
+
+        settings.ITEM_IMAGE_SIZES.sort()
+        for size in settings.ITEM_IMAGE_SIZES:
+            output = BytesIO()
+
+            im = Image.open(self.image).convert("RGB")
+            original_width, original_height = im.size
+            if original_width > size or original_height > size:
+                factor = max(size / original_width, size / original_height)
+                im = im.resize(
+                    (round(original_width * factor), round(original_height * factor))
+                )
+
+            # if this is the smallest size, make a square thumbnail.
+            if size == settings.ITEM_IMAGE_SIZES[0]:
+                im = im.crop((0, 0, size, size))
+
+            im.save(output, format="JPEG", quality=100)
+
+            output.seek(0)
+
+            if size != settings.ITEM_IMAGE_SIZES[-1]:
+                default_storage.save(
+                    f"{file_path}-{size}.jpg", ContentFile(output.read())
+                )
+                self.thumbnail_sizes.append(size)
+            else:
+                self.full_size_width = im.size[0]
+                self.full_size_height = im.size[1]
+
+                self.image = InMemoryUploadedFile(
+                    output,
+                    "ImageField",
+                    f"{file_path}.jpg",
+                    "image/jpeg",
+                    sys.getsizeof(output),
+                    None,
+                )
+
+        super().save(*args, **kwargs)
 
 
 class Item(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
     description = models.TextField(blank=True, null=True)
-    location = models.ForeignKey("districts.models.Building", on_delete=models.CASCADE)
-    owner = models.ForeignKey("noauth.models.User", on_delete=models.CASCADE)
+    location = models.ForeignKey("districts.Building", on_delete=models.CASCADE)
+    owner = models.ForeignKey("noauth.User", on_delete=models.CASCADE)
     deleted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.name}"
 
     def save(self, *args, **kwargs):
         self.slug = f"{slugify(self.name)[:45]}-{''.join(choices(string.ascii_lowercase + string.digits, k=10))}"
