@@ -25,6 +25,8 @@ def generate_file_path(instance, filename):
 
 def delete_thumbnails(sender, instance, using, **kwargs):
     """Post-delete signal handler to delete thumbnail images."""
+    if not isinstance(sender, ItemImage):
+        return
     for size in instance.thumbnail_sizes:
         default_storage.delete(f"{instance.image.name.split('.')[0]}-{size}.jpg")
 
@@ -53,6 +55,7 @@ class ItemImage(models.Model):
 
     def save(self, *args, **kwargs):
         file_path = f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{str(uuid.uuid4())}'
+        self.thumbnail_sizes = []
 
         settings.ITEM_IMAGE_SIZES.sort()
         for size in settings.ITEM_IMAGE_SIZES:
@@ -97,7 +100,7 @@ class ItemImage(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, max_length=60)
     description = models.TextField(blank=True, null=True)
     location = models.ForeignKey("districts.Building", on_delete=models.CASCADE)
     owner = models.ForeignKey("noauth.User", on_delete=models.CASCADE)

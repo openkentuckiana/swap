@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+boto3 = ">=1.1.19"
 django = "==2.1.2"
 django-cleanup = "*"
 django-heroku = "*"
