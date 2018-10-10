@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f897edfc54b9f99685f859fc93a5f7d4693293ab231fba66b87361867b17aef9"
+            "sha256": "70685094568153edf416507c2fee07a00a5fef5e5e0044a50c3f212a5cb81ece"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,21 @@
         ]
     },
     "default": {
+        "boto3": {
+            "hashes": [
+                "sha256:0409ee2b927a8767ca629c5d2f09799e937636ec0f0123842b63f526ec170c0c",
+                "sha256:3e31a82b3739e44dc47ab99f514ff9ef9b230f38ecf4dbe04a90edc53b284468"
+            ],
+            "index": "pypi",
+            "version": "==1.9.20"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:4152cd92e7f979707e35be7d4fa18f0435050b460e0a54cd88db27c2586d8886",
+                "sha256:dde120395f3775fa2273c1e0e5b909532f74461601d85c6c5f5f719991cffd22"
+            ],
+            "version": "==1.12.20"
+        },
         "dj-database-url": {
             "hashes": [
                 "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163",
@@ -30,14 +45,6 @@
             ],
             "index": "pypi",
             "version": "==2.1.2"
-        },
-        "django-cleanup": {
-            "hashes": [
-                "sha256:0e91783200d75f21a64cb5f9d9dbc1bedd377a7d8de97a55ec8a0e2e28abaf5d",
-                "sha256:36f04ec3901e6d9fd996b99b383c2367c0b880c77e6699142b51ca64cb659e54"
-            ],
-            "index": "pypi",
-            "version": "==2.1.0"
         },
         "django-heroku": {
             "hashes": [
@@ -70,6 +77,14 @@
             "index": "pypi",
             "version": "==1.7.1"
         },
+        "docutils": {
+            "hashes": [
+                "sha256:02aec4bd92ab067f6ff27a38a38a41173bf01bed8f89157768c1573f53e474a6",
+                "sha256:51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274",
+                "sha256:7a4bd47eaf6596e1295ecb11361139febe29b084a87bf005bf899f9a42edc3c6"
+            ],
+            "version": "==0.14"
+        },
         "freezegun": {
             "hashes": [
                 "sha256:703caac155dcaad61f78de4cb0666dca778d854dfb90b3699930adee0559a622",
@@ -85,6 +100,13 @@
             ],
             "index": "pypi",
             "version": "==19.9.0"
+        },
+        "jmespath": {
+            "hashes": [
+                "sha256:6a81d4c9aa62caf061cb517b4d9ad1dd300374cd4706997aff9cd6aedd61fc64",
+                "sha256:f11b4461f425740a1d908e9a3f7365c3d2e569f6ca68a2ff8bc5bcd9676edd63"
+            ],
+            "version": "==0.9.3"
         },
         "pillow": {
             "hashes": [
@@ -198,6 +220,7 @@
                 "sha256:1adb80e7a782c12e52ef9a8182bebeb73f1d7e24e374397af06fb4956c8dc5c0",
                 "sha256:e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"
             ],
+            "markers": "python_version >= '2.7'",
             "version": "==2.7.3"
         },
         "pytz": {
@@ -208,12 +231,27 @@
             "index": "pypi",
             "version": "==2018.5"
         },
+        "s3transfer": {
+            "hashes": [
+                "sha256:90dc18e028989c609146e241ea153250be451e05ecc0c2832565231dacdf59c1",
+                "sha256:c7a9ec356982d5e9ab2d4b46391a7d6a950e2b04c472419f5fdec70cc0ada72f"
+            ],
+            "version": "==0.1.13"
+        },
         "six": {
             "hashes": [
                 "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
                 "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
             ],
             "version": "==1.11.0"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
+                "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
+            ],
+            "markers": "python_version != '3.0.*' and python_version != '3.1.*' and python_version >= '2.6' and python_version != '3.3.*' and python_version < '4' and python_version != '3.2.*'",
+            "version": "==1.23"
         },
         "whitenoise": {
             "hashes": [
@@ -424,6 +462,7 @@
                 "sha256:1adb80e7a782c12e52ef9a8182bebeb73f1d7e24e374397af06fb4956c8dc5c0",
                 "sha256:e27001de32f627c22380a688bcc43ce83504a7bc5da472209b4c70f02829f0b8"
             ],
+            "markers": "python_version >= '2.7'",
             "version": "==2.7.3"
         },
         "pytz": {

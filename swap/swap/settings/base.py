@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     "django.contrib.gis",
     "localflavor",
     "maintenance_mode",
-    "django_cleanup",
     "districts",
     "items",
     "noauth",
@@ -148,3 +147,4 @@ NOAUTH_CODE_TTL_MINUTES = 10
 # Largest size will be used to resize original image.
 # Sizes in-between will be used to generate thumbnails.
 ITEM_IMAGE_SIZES = [200, 500, 1500]
+ITEM_IMAGE_MIN_HEIGHT_AND_WIDTH = ITEM_IMAGE_SIZES[-2]

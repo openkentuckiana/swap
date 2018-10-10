@@ -13,6 +13,7 @@ from django.core.files.storage import default_storage
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.db.models.signals import post_delete
+from django.dispatch import receiver
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from PIL import Image
@@ -21,17 +22,6 @@ from PIL import Image
 def generate_file_path(instance, filename):
     """Generates a file upload path."""
     return f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{filename}'
-
-
-def delete_thumbnails(sender, instance, using, **kwargs):
-    """Post-delete signal handler to delete thumbnail images."""
-    if not isinstance(sender, ItemImage):
-        return
-    for size in instance.thumbnail_sizes:
-        default_storage.delete(f"{instance.image.name.split('.')[0]}-{size}.jpg")
-
-
-post_delete.connect(delete_thumbnails)
 
 
 class ItemImage(models.Model):
@@ -44,16 +34,15 @@ class ItemImage(models.Model):
     def __str__(self):
         return f"{self.image.name} - {self.item.name}"
 
-    def clean_fields(self, exclude=None):
-        super().clean_fields(exclude=exclude)
-        if self.image.height < 200 or self.image.width < 500:
+    def save(self, *args, **kwargs):
+        min_size = settings.ITEM_IMAGE_MIN_HEIGHT_AND_WIDTH
+        if self.image.height < min_size or self.image.width < min_size:
             raise ValidationError(
                 _(
-                    "Images must be over 200 pixels tall and wide. Please upload a larger image."
+                    f"Images must be over {min_size} pixels tall and wide. Please upload a larger image."
                 )
             )
 
-    def save(self, *args, **kwargs):
         file_path = f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{str(uuid.uuid4())}'
         self.thumbnail_sizes = []
 
@@ -96,6 +85,15 @@ class ItemImage(models.Model):
                 )
 
         super().save(*args, **kwargs)
+
+
+@receiver(post_delete, sender=ItemImage)
+def delete_thumbnails(sender, instance, using, **kwargs):
+    """Post-delete signal handler to delete thumbnail images."""
+    default_storage.delete(instance.image.path)
+
+    for size in instance.thumbnail_sizes:
+        default_storage.delete(f"{instance.image.path.split('.')[0]}-{size}.jpg")
 
 
 class Item(models.Model):
