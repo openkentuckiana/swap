@@ -63,6 +63,6 @@ cli:
 	@docker-compose run --rm app bash
 
 tail:
-	@docker-compose logs -f
+	@docker-compose logs -ft
 
 .PHONY: start stop status restart clean build test makemigrations migrate fixtures flushdb cli tail

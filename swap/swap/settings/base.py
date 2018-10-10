@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     "localflavor",
     "maintenance_mode",
     "districts",
+    "items",
     "noauth",
 ]
 
@@ -141,3 +142,9 @@ STATIC_URL = "/dj-static/"
 DEFAULT_FROM_EMAIL = get_env_variable("DEFAULT_FROM_EMAIL", "admin@swapsite.com")
 AUTH_USER_MODEL = "noauth.User"
 NOAUTH_CODE_TTL_MINUTES = 10
+
+# Smallest size will be used to generate a square thumbnail.
+# Largest size will be used to resize original image.
+# Sizes in-between will be used to generate thumbnails.
+ITEM_IMAGE_SIZES = [200, 500, 1500]
+ITEM_IMAGE_MIN_HEIGHT_AND_WIDTH = ITEM_IMAGE_SIZES[-2]

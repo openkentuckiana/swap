@@ -17,23 +17,15 @@ services:
         pipenv_arg: --dev
     environment:
       - DJANGO_SETTINGS_MODULE=swap.settings.local
+      - PYTHONUNBUFFERED=1
     volumes:
       - ./swap:/app
     networks:
       - main
     depends_on:
       - db
-  nginx:
-    image: nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./swap/static:/usr/share/nginx/swap/static
     ports:
       - "80:80"
-    networks:
-      - main
-    depends_on:
-      - app
 
 networks:
   main:

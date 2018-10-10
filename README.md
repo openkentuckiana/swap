@@ -26,7 +26,7 @@ Note that for Windows, Docker requires 64bit Windows 10 Pro, Enterprise, or Educ
 ### Running the App
 Open a terminal (Terminal on Mac, Git Command Prompt on Windows), navigate to the Swap directory, and run this command: `make begin`.
 
-This command will start the application in debug mode, a Postgres database instance, and nginx (a web server). Each of these runs in its own container, which you'll see start. `make begin` will also set up the database by running [migrations](https://docs.djangoproject.com/en/2.1/topics/migrations/) and installing [fixtures](https://docs.djangoproject.com/en/2.1/howto/initial-data/#providing-data-with-fixtures).
+This command will start the application in debug mode along with a Postgres database instance. Each of these runs in its own container, which you'll see start. `make begin` will also set up the database by running [migrations](https://docs.djangoproject.com/en/2.1/topics/migrations/) and installing [fixtures](https://docs.djangoproject.com/en/2.1/howto/initial-data/#providing-data-with-fixtures).
 
 You can view the site by going to [http://localhost/](http://localhost/) in your browser.
 
