@@ -12,21 +12,25 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-from districts.models import District
+from districts.models import Building, District
+from lib.models import BaseModel
 
 DEFAULT_CODE_LENGTH = 6
 DEFAULT_CODE_TTL_MINUTES = 60
 
 
-class User(AbstractUser):
+class User(AbstractUser, BaseModel):
     district = models.ForeignKey(District, on_delete=models.CASCADE)
+    building = models.ForeignKey(
+        Building, on_delete=models.CASCADE, blank=True, null=True
+    )
     code_last_sent = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.username}"
 
 
-class AuthCode(models.Model):
+class AuthCode(BaseModel):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         related_name="auth_codes",

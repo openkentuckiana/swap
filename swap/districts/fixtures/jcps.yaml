@@ -1,829 +1,828 @@
 - model: districts.district
   pk: 2
-  fields: {name: JCPS, slug: jcps, email_domain: jefferson.kyschools.us, uri: 'https://www.jefferson.kyschools.us',
-    deleted: false}
+  fields: {name: JCPS, slug: jcps, email_domain: jefferson.kyschools.us, uri: 'https://www.jefferson.kyschools.us', created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 3
   fields: {name: Coral Ridge Elementary, slug: coral-ridge-elementary, address: 10608
       National Tpke, city: Fairdale, state: KY, postal_code: '40118', location: SRID=4326;POINT
-      (-85.739047 38.095033), district: 2, deleted: false}
+      (-85.739047 38.095033), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 4
   fields: {name: Binet School, slug: binet-school, address: 3410 Bon Air Ave, city: Louisville,
     state: KY, postal_code: '40220', location: SRID=4326;POINT (-85.656031 38.207932),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 5
   fields: {name: Noe Middle, slug: noe-middle, address: 121 W Lee St, city: Louisville,
     state: KY, postal_code: '40208', location: SRID=4326;POINT (-85.757419 38.225111),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 6
   fields: {name: Home Of The Innocents Discovery, slug: home-of-the-innocents-discovery,
     address: 1100 E Market St, city: Louisville, state: KY, postal_code: '40206',
-    location: SRID=4326;POINT (-85.73044 38.252317), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.73044 38.252317), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 7
   fields: {name: Rangeland Elementary, slug: rangeland-elementary, address: 1701 Rangeland
       Rd, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.66929 38.165836), district: 2, deleted: false}
+      (-85.66929 38.165836), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 8
   fields: {name: W.E.B. DuBois Academy, slug: web-dubois-academy, address: 4425 Preston
       Hwy, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.720512 38.183914), district: 2, deleted: false}
+      (-85.720512 38.183914), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 9
   fields: {name: Minors Lane Elementary, slug: minors-lane-elementary, address: 8510
       Minor Ln, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.71436 38.125346), district: 2, deleted: false}
+      (-85.71436 38.125346), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 10
   fields: {name: Boys & Girls Haven, slug: boys-girls-haven, address: 2301 Goldsmith
       Ln, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.667502 38.211563), district: 2, deleted: false}
+      (-85.667502 38.211563), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 11
   fields: {name: Churchill Park School, slug: churchill-park-school, address: 435
       Boxley Ave, city: Louisville, state: KY, postal_code: '40209', location: SRID=4326;POINT
-      (-85.75238299999999 38.205869), district: 2, deleted: false}
+      (-85.75238299999999 38.205869), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 12
   fields: {name: Hartstern Elementary, slug: hartstern-elementary, address: 5200 Morningside
       Way, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.66657499999999 38.141669), district: 2, deleted: false}
+      (-85.66657499999999 38.141669), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 13
   fields: {name: Kennedy Montessori Elementary, slug: kennedy-montessori-elementary,
     address: 3800 Gibson Ln, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.818763 38.231572), district: 2, deleted: false}
+      (-85.818763 38.231572), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 14
   fields: {name: McFerran Preparatory Academy, slug: mcferran-preparatory-academy,
     address: 1900 S 7th St, city: Louisville, state: KY, postal_code: '40208', location: SRID=4326;POINT
-      (-85.776533 38.221153), district: 2, deleted: false}
+      (-85.776533 38.221153), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 15
   fields: {name: St Joseph Childrens Home, slug: st-joseph-childrens-home, address: 2823
       Frankfort Ave, city: Louisville, state: KY, postal_code: '40206', location: SRID=4326;POINT
-      (-85.689615 38.256417), district: 2, deleted: false}
+      (-85.689615 38.256417), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 16
   fields: {name: ESL Newcomer Academy, slug: esl-newcomer-academy, address: 3741 Pulliam
       Dr, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.64339 38.204236), district: 2, deleted: false}
+      (-85.64339 38.204236), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 17
   fields: {name: Fern Creek High, slug: fern-creek-high, address: 9115 Fern Creek
       Rd, city: Louisville, state: KY, postal_code: '40291', location: SRID=4326;POINT
-      (-85.592563 38.156378), district: 2, deleted: false}
+      (-85.592563 38.156378), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 18
   fields: {name: Wheeler Elementary, slug: wheeler-elementary, address: 5700 Cynthia
       Dr, city: Louisville, state: KY, postal_code: '40291', location: SRID=4326;POINT
-      (-85.574516 38.166603), district: 2, deleted: false}
+      (-85.574516 38.166603), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 19
   fields: {name: Rutherford Elementary, slug: rutherford-elementary, address: 301
       W Southland Blvd, city: Louisville, state: KY, postal_code: '40214', location: SRID=4326;POINT
-      (-85.768209 38.172609), district: 2, deleted: false}
+      (-85.768209 38.172609), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 20
   fields: {name: Southern High, slug: southern-high, address: 8620 Preston Hwy, city: Louisville,
     state: KY, postal_code: '40219', location: SRID=4326;POINT (-85.68158200000001
-      38.126089), district: 2, deleted: false}
+      38.126089), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 21
   fields: {name: Byck Elementary, slug: byck-elementary, address: 2328 Cedar St, city: Louisville,
     state: KY, postal_code: '40212', location: SRID=4326;POINT (-85.79027000000001
-      38.255691), district: 2, deleted: false}
+      38.255691), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 22
   fields: {name: Portland Elementary, slug: portland-elementary, address: 3410 Northwestern
       Pkwy, city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT
-      (-85.80326700000001 38.274451), district: 2, deleted: false}
+      (-85.80326700000001 38.274451), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 23
   fields: {name: Zachary Taylor Elementary, slug: zachary-taylor-elementary, address: 9620
       Westport Rd, city: Louisville, state: KY, postal_code: '40241', location: SRID=4326;POINT
-      (-85.572598 38.286367), district: 2, deleted: false}
+      (-85.572598 38.286367), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 24
   fields: {name: Meyzeek Middle, slug: meyzeek-middle, address: 828 S Jackson St,
     city: Louisville, state: KY, postal_code: '40203', location: SRID=4326;POINT (-85.74691900000001
-      38.241702), district: 2, deleted: false}
+      38.241702), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 25
   fields: {name: Waller-Williams Environmental, slug: waller-williams-environmental,
     address: 2415 Rockford Ln, city: Louisville, state: KY, postal_code: '40216',
-    location: SRID=4326;POINT (-85.842646 38.17767), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.842646 38.17767), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 26
   fields: {name: Luhr Elementary, slug: luhr-elementary, address: 6900 Fegenbush Ln,
     city: Louisville, state: KY, postal_code: '40228', location: SRID=4326;POINT (-85.629656
-      38.149378), district: 2, deleted: false}
+      38.149378), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 27
   fields: {name: Lincoln Elementary Performing Arts, slug: lincoln-elementary-performing-arts,
     address: 930 E Main St, city: Louisville, state: KY, postal_code: '40206', location: SRID=4326;POINT
-      (-85.734903 38.253897), district: 2, deleted: false}
+      (-85.734903 38.253897), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 28
   fields: {name: Ballard High, slug: ballard-high, address: 6000 Brownsboro Rd, city: Louisville,
     state: KY, postal_code: '40222', location: SRID=4326;POINT (-85.624877 38.283684),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 29
   fields: {name: Bellewood, slug: bellewood, address: 11103 Park Rd, city: Louisville,
     state: KY, postal_code: '40223', location: SRID=4326;POINT (-85.543998 38.268287),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 30
   fields: {name: Kerrick Elementary, slug: kerrick-elementary, address: 2210 Upper
       Hunters Trce, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.83832200000001 38.165327), district: 2, deleted: false}
+      (-85.83832200000001 38.165327), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 31
   fields: {name: Crosby Middle, slug: crosby-middle, address: 303 Gatehouse Ln, city: Louisville,
     state: KY, postal_code: '40243', location: SRID=4326;POINT (-85.55553999999999
-      38.240242), district: 2, deleted: false}
+      38.240242), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 32
   fields: {name: Watterson Elementary, slug: watterson-elementary, address: 3900 Breckenridge
       Ln, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.62707899999999 38.191503), district: 2, deleted: false}
+      (-85.62707899999999 38.191503), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 33
   fields: {name: The Brook-KMI, slug: the-brook-kmi, address: 8521 Lagrange Rd, city: Louisville,
     state: KY, postal_code: '40242', location: SRID=4326;POINT (-85.59353900000001
-      38.265907), district: 2, deleted: false}
+      38.265907), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 34
   fields: {name: Medora Elementary, slug: medora-elementary, address: 11801 Deering
       Rd, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.874866 38.09018), district: 2, deleted: false}
+      (-85.874866 38.09018), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 35
   fields: {name: Conway Middle, slug: conway-middle, address: 6300 Terry Rd, city: Louisville,
     state: KY, postal_code: '40258', location: SRID=4326;POINT (-85.868505 38.159466),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 36
   fields: {name: Crums Lane Elementary, slug: crums-lane-elementary, address: 3212
       S Crums Ln, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.83907600000001 38.192885), district: 2, deleted: false}
+      (-85.83907600000001 38.192885), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 37
   fields: {name: Marion C. Moore School, slug: marion-c-moore-school, address: 6415
       Outer Loop, city: Louisville, state: KY, postal_code: '40228', location: SRID=4326;POINT
-      (-85.638558 38.139664), district: 2, deleted: false}
+      (-85.638558 38.139664), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 38
   fields: {name: Norton Commons Elementary School, slug: norton-commons-elementary-school,
     address: 10941 Kings Crown Dr, city: Prospect, state: KY, postal_code: '40059',
-    location: SRID=4326;POINT (-85.56424199999999 38.328624), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.56424199999999 38.328624), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 39
   fields: {name: Chancey Elementary, slug: chancey-elementary, address: 4301 Murphy
       Ln, city: Louisville, state: KY, postal_code: '40241', location: SRID=4326;POINT
-      (-85.535196 38.307051), district: 2, deleted: false}
+      (-85.535196 38.307051), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 40
   fields: {name: Dupont Manual High, slug: dupont-manual-high, address: 120 W Lee
       St, city: Louisville, state: KY, postal_code: '40208', location: SRID=4326;POINT
-      (-85.758833 38.222211), district: 2, deleted: false}
+      (-85.758833 38.222211), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 41
   fields: {name: Mary Jo and William MacDonald Maryhurst, slug: mary-jo-and-william-macdonald-maryhurst,
     address: 1015 Dorsey Ln, city: Louisville, state: KY, postal_code: '40223', location: SRID=4326;POINT
-      (-85.561611 38.26479), district: 2, deleted: false}
+      (-85.561611 38.26479), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 42
   fields: {name: Lowe Elementary, slug: lowe-elementary, address: 210 Oxfordshire
       Ln, city: Louisville, state: KY, postal_code: '40222', location: SRID=4326;POINT
-      (-85.59214 38.245169), district: 2, deleted: false}
+      (-85.59214 38.245169), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 43
   fields: {name: Laukhuf Elementary, slug: laukhuf-elementary, address: 5100 Capewood
       Dr, city: Louisville, state: KY, postal_code: '40229', location: SRID=4326;POINT
-      (-85.66471900000001 38.100219), district: 2, deleted: false}
+      (-85.66471900000001 38.100219), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 44
   fields: {name: Western Middle School for the Arts, slug: western-middle-school-for-the-arts,
     address: 2201 W Main St, city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT
-      (-85.78725 38.261096), district: 2, deleted: false}
+      (-85.78725 38.261096), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 45
   fields: {name: Coleridge-Taylor Montessori Elementary, slug: coleridge-taylor-montessori-elementary,
     address: 1115 W Chestnut St, city: Louisville, state: KY, postal_code: '40203',
-    location: SRID=4326;POINT (-85.770116 38.250996), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.770116 38.250996), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 46
   fields: {name: Eastern High, slug: eastern-high, address: 12400 Old Shelbyville
       Rd, city: Louisville, state: KY, postal_code: '40243', location: SRID=4326;POINT
-      (-85.526122 38.243439), district: 2, deleted: false}
+      (-85.526122 38.243439), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 47
   fields: {name: Johnson Traditional Middle, slug: johnson-traditional-middle, address: 2509
       Wilson Ave, city: Louisville, state: KY, postal_code: '40210', location: SRID=4326;POINT
-      (-85.79550500000001 38.235592), district: 2, deleted: false}
+      (-85.79550500000001 38.235592), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 48
   fields: {name: Carter Traditional Elementary, slug: carter-traditional-elementary,
     address: 3600 Bohne Ave, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.81483 38.228147), district: 2, deleted: false}
+      (-85.81483 38.228147), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 49
   fields: {name: Tully Elementary, slug: tully-elementary, address: 3300 College Dr,
     city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT (-85.571415
-      38.196078), district: 2, deleted: false}
+      38.196078), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 50
   fields: {name: Klondike Lane Elementary, slug: klondike-lane-elementary, address: 3807
       Klondike Ln, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.637254 38.209031), district: 2, deleted: false}
+      (-85.637254 38.209031), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 51
   fields: {name: Young Elementary, slug: young-elementary, address: 3526 W Muhammad
       Ali Blvd, city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT
-      (-85.810253 38.256598), district: 2, deleted: false}
+      (-85.810253 38.256598), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 52
   fields: {name: Indian Trail Elementary, slug: indian-trail-elementary, address: 3709
       E Indian Trl, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.690698 38.17122), district: 2, deleted: false}
+      (-85.690698 38.17122), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 53
   fields: {name: Hazelwood Elementary, slug: hazelwood-elementary, address: 1325 Bluegrass
       Ave, city: Louisville, state: KY, postal_code: '40215', location: SRID=4326;POINT
-      (-85.785586 38.180845), district: 2, deleted: false}
+      (-85.785586 38.180845), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 54
   fields: {name: Fern Creek Elementary, slug: fern-creek-elementary, address: 8815
       Ferndale Rd, city: Louisville, state: KY, postal_code: '40291', location: SRID=4326;POINT
-      (-85.595197 38.156737), district: 2, deleted: false}
+      (-85.595197 38.156737), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 55
   fields: {name: Valley High, slug: valley-high, address: 10200 Dixie Hwy, city: Louisville,
     state: KY, postal_code: '40272', location: SRID=4326;POINT (-85.86782700000001
-      38.107794), district: 2, deleted: false}
+      38.107794), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 56
   fields: {name: Louisville Day, slug: louisville-day, address: 8711 Lagrange Rd,
     city: Louisville, state: KY, postal_code: '40242', location: SRID=4326;POINT (-85.589738
-      38.266941), district: 2, deleted: false}
+      38.266941), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 57
   fields: {name: Georgia Chaffee Teenage Parent Program, slug: georgia-chaffee-teenage-parent-program,
     address: 1010 Neighborhood Pl, city: Fairdale, state: KY, postal_code: '40118',
-    location: SRID=4326;POINT (-85.749105 38.116242), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.749105 38.116242), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 58
   fields: {name: Frayser Elementary, slug: frayser-elementary, address: 1230 Larchmont
       Ave, city: Louisville, state: KY, postal_code: '40215', location: SRID=4326;POINT
-      (-85.77992 38.208481), district: 2, deleted: false}
+      (-85.77992 38.208481), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 59
   fields: {name: Fairdale Elementary, slug: fairdale-elementary, address: 10104 Mitchell
       Hill Rd, city: Fairdale, state: KY, postal_code: '40118', location: SRID=4326;POINT
-      (-85.762355 38.104801), district: 2, deleted: false}
+      (-85.762355 38.104801), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 60
   fields: {name: Auburndale Elementary, slug: auburndale-elementary, address: 5749
       New Cut Rd, city: Louisville, state: KY, postal_code: '40214', location: SRID=4326;POINT
-      (-85.770245 38.134257), district: 2, deleted: false}
+      (-85.770245 38.134257), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 61
   fields: {name: Lassiter Middle, slug: lassiter-middle, address: 8200 Candleworth
       Dr, city: Louisville, state: KY, postal_code: '40214', location: SRID=4326;POINT
-      (-85.786366 38.131061), district: 2, deleted: false}
+      (-85.786366 38.131061), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 62
   fields: {name: Chenoweth Elementary, slug: chenoweth-elementary, address: 3622 Brownsboro
       Rd, city: Louisville, state: KY, postal_code: '40207', location: SRID=4326;POINT
-      (-85.669319 38.262831), district: 2, deleted: false}
+      (-85.669319 38.262831), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 63
   fields: {name: Newburg Middle, slug: newburg-middle, address: 4901 Exeter Ave, city: Louisville,
     state: KY, postal_code: '40218', location: SRID=4326;POINT (-85.66831000000001
-      38.180017), district: 2, deleted: false}
+      38.180017), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 64
   fields: {name: Sanders Elementary, slug: sanders-elementary, address: 8408 Terry
       Rd, city: Louisville, state: KY, postal_code: '40258', location: SRID=4326;POINT
-      (-85.875998 38.132355), district: 2, deleted: false}
+      (-85.875998 38.132355), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 65
   fields: {name: Eisenhower Elementary, slug: eisenhower-elementary, address: 5300
       Jessamine Ln, city: Louisville, state: KY, postal_code: '40258', location: SRID=4326;POINT
-      (-85.855 38.137574), district: 2, deleted: false}
+      (-85.855 38.137574), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 66
   fields: {name: Foster Traditional Academy, slug: foster-traditional-academy, address: 1401
       S 41st St, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.81988800000001 38.236835), district: 2, deleted: false}
+      (-85.81988800000001 38.236835), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 67
   fields: {name: Jacob Elementary, slug: jacob-elementary, address: 3701 E Wheatmore
       Dr, city: Louisville, state: KY, postal_code: '40215', location: SRID=4326;POINT
-      (-85.795675 38.192182), district: 2, deleted: false}
+      (-85.795675 38.192182), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 68
   fields: {name: Gutermuth Elementary, slug: gutermuth-elementary, address: 1500 Sanders
       Ln, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.80751600000001 38.177859), district: 2, deleted: false}
+      (-85.80751600000001 38.177859), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 69
   fields: {name: Jefferson County Traditional Middle, slug: jefferson-county-traditional-middle,
     address: 1418 Morton Ave, city: Louisville, state: KY, postal_code: '40204', location: SRID=4326;POINT
-      (-85.727276 38.240137), district: 2, deleted: false}
+      (-85.727276 38.240137), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 70
   fields: {name: Middletown Elementary, slug: middletown-elementary, address: 218
       N Madison Ave, city: Louisville, state: KY, postal_code: '40243', location: SRID=4326;POINT
-      (-85.541831 38.248561), district: 2, deleted: false}
+      (-85.541831 38.248561), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 71
   fields: {name: The Phoenix School Of Discovery, slug: the-phoenix-school-of-discovery,
     address: 502 Wood Rd, city: Louisville, state: KY, postal_code: '40222', location: SRID=4326;POINT
-      (-85.605243 38.255995), district: 2, deleted: false}
+      (-85.605243 38.255995), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 72
   fields: {name: Jefferson County High, slug: jefferson-county-high, address: 900
       S Floyd St, city: Louisville, state: KY, postal_code: '40203', location: SRID=4326;POINT
-      (-85.750941 38.240036), district: 2, deleted: false}
+      (-85.750941 38.240036), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 73
   fields: {name: Layne Elementary, slug: layne-elementary, address: 9831 East Ave,
     city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT (-85.847745
-      38.110671), district: 2, deleted: false}
+      38.110671), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 74
   fields: {name: Shelby Traditional Academy, slug: shelby-traditional-academy, address: 735
       Ziegler St, city: Louisville, state: KY, postal_code: '40217', location: SRID=4326;POINT
-      (-85.744973 38.223178), district: 2, deleted: false}
+      (-85.744973 38.223178), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 75
   fields: {name: Stuart Academy, slug: stuart-academy, address: 4603 Valley Station
       Rd, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.84361800000001 38.108335), district: 2, deleted: false}
+      (-85.84361800000001 38.108335), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 76
   fields: {name: Price Elementary, slug: price-elementary, address: 5001 Garden Green
       Way, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.66618 38.176845), district: 2, deleted: false}
+      (-85.66618 38.176845), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 77
   fields: {name: Mill Creek Elementary, slug: mill-creek-elementary, address: 3816
       Dixie Hwy, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.81029100000001 38.198527), district: 2, deleted: false}
+      (-85.81029100000001 38.198527), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 78
   fields: {name: Engelhard Elementary, slug: engelhard-elementary, address: 1004 S
       1st St, city: Louisville, state: KY, postal_code: '40203', location: SRID=4326;POINT
-      (-85.75515799999999 38.238097), district: 2, deleted: false}
+      (-85.75515799999999 38.238097), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 79
   fields: {name: Bloom Elementary, slug: bloom-elementary, address: 1627 Lucia Ave,
     city: Louisville, state: KY, postal_code: '40204', location: SRID=4326;POINT (-85.719725
-      38.236712), district: 2, deleted: false}
+      38.236712), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 80
   fields: {name: Wilt Elementary, slug: wilt-elementary, address: 6700 Price Lane
       Rd, city: Louisville, state: KY, postal_code: '40229', location: SRID=4326;POINT
-      (-85.63822500000001 38.102415), district: 2, deleted: false}
+      (-85.63822500000001 38.102415), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 81
   fields: {name: Stonestreet Elementary, slug: stonestreet-elementary, address: 10007
       Stonestreet Rd, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.834281 38.109159), district: 2, deleted: false}
+      (-85.834281 38.109159), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 82
   fields: {name: Wheatley Elementary, slug: wheatley-elementary, address: 1107 S 17th
       St, city: Louisville, state: KY, postal_code: '40210', location: SRID=4326;POINT
-      (-85.782775 38.239246), district: 2, deleted: false}
+      (-85.782775 38.239246), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 83
   fields: {name: Semple Elementary, slug: semple-elementary, address: 724 Denmark
       St, city: Louisville, state: KY, postal_code: '40215', location: SRID=4326;POINT
-      (-85.772019 38.195489), district: 2, deleted: false}
+      (-85.772019 38.195489), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 84
   fields: {name: Mary Ryan Academy, slug: mary-ryan-academy, address: 3307 E Indian
       Trl, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.700183 38.171418), district: 2, deleted: false}
+      (-85.700183 38.171418), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 85
   fields: {name: Louisville Metro Youth Center, slug: louisville-metro-youth-center,
     address: 720 W Jefferson St, city: Louisville, state: KY, postal_code: '40202',
-    location: SRID=4326;POINT (-85.763161 38.254218), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.763161 38.254218), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 86
   fields: {name: Jeffersontown High, slug: jeffersontown-high, address: 9600 Old Six
       Mile Ln, city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT
-      (-85.58103300000001 38.201183), district: 2, deleted: false}
+      (-85.58103300000001 38.201183), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 87
   fields: {name: Camp Taylor Elementary, slug: camp-taylor-elementary, address: 1446
       Belmar Dr, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.719055 38.196464), district: 2, deleted: false}
+      (-85.719055 38.196464), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 88
   fields: {name: Dixie Elementary, slug: dixie-elementary, address: 10201 Casalanda
       Dr, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.87286400000001 38.107933), district: 2, deleted: false}
+      (-85.87286400000001 38.107933), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 89
   fields: {name: Waggener High, slug: waggener-high, address: 330 S Hubbards Ln, city: Louisville,
     state: KY, postal_code: '40207', location: SRID=4326;POINT (-85.63732400000001
-      38.244949), district: 2, deleted: false}
+      38.244949), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 90
   fields: {name: Home Of The Innocents School, slug: home-of-the-innocents-school,
     address: 1100 E Market St, city: Louisville, state: KY, postal_code: '40206',
-    location: SRID=4326;POINT (-85.73044 38.252317), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.73044 38.252317), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 91
   fields: {name: Pleasure Ridge Park High, slug: pleasure-ridge-park-high, address: 5901
       Greenwood Rd, city: Louisville, state: KY, postal_code: '40258', location: SRID=4326;POINT
-      (-85.86368400000001 38.145898), district: 2, deleted: false}
+      (-85.86368400000001 38.145898), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 92
   fields: {name: Stopher Elementary, slug: stopher-elementary, address: 14417 Aiken
       Rd, city: Louisville, state: KY, postal_code: '40245', location: SRID=4326;POINT
-      (-85.48880200000001 38.268383), district: 2, deleted: false}
+      (-85.48880200000001 38.268383), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 93
   fields: {name: Roosevelt-Perry Elementary, slug: roosevelt-perry-elementary, address: 1615
       W Broadway, city: Louisville, state: KY, postal_code: '40203', location: SRID=4326;POINT
-      (-85.778879 38.249023), district: 2, deleted: false}
+      (-85.778879 38.249023), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 94
   fields: {name: Blue Lick Elementary, slug: blue-lick-elementary, address: 9801 Blue
       Lick Rd, city: Louisville, state: KY, postal_code: '40229', location: SRID=4326;POINT
-      (-85.691316 38.106316), district: 2, deleted: false}
+      (-85.691316 38.106316), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 95
   fields: {name: Audubon Traditional Elementary, slug: audubon-traditional-elementary,
     address: 1051 Hess Ln, city: Louisville, state: KY, postal_code: '40217', location: SRID=4326;POINT
-      (-85.731275 38.208123), district: 2, deleted: false}
+      (-85.731275 38.208123), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 96
   fields: {name: Schaffner Traditional Elementary, slug: schaffner-traditional-elementary,
     address: 2701 Crums Ln, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.824337 38.195997), district: 2, deleted: false}
+      (-85.824337 38.195997), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 97
   fields: {name: Barret Traditional Middle, slug: barret-traditional-middle, address: 2561
       Grinstead Dr, city: Louisville, state: KY, postal_code: '40206', location: SRID=4326;POINT
-      (-85.695789 38.249471), district: 2, deleted: false}
+      (-85.695789 38.249471), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 98
   fields: {name: J. Graham Brown School, slug: j-graham-brown-school, address: 546
       S 1st St, city: Louisville, state: KY, postal_code: '40202', location: SRID=4326;POINT
-      (-85.753221 38.249247), district: 2, deleted: false}
+      (-85.753221 38.249247), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 99
   fields: {name: Frederick Law Olmsted Academy South, slug: frederick-law-olmsted-academy-south,
     address: 5650 Southern Pkwy, city: Louisville, state: KY, postal_code: '40214',
-    location: SRID=4326;POINT (-85.779078 38.172175), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.779078 38.172175), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 100
   fields: {name: Goldsmith Elementary, slug: goldsmith-elementary, address: 3520 Goldsmith
       Ln, city: Louisville, state: KY, postal_code: '40220', location: SRID=4326;POINT
-      (-85.65445800000001 38.208359), district: 2, deleted: false}
+      (-85.65445800000001 38.208359), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 101
   fields: {name: Bowen Elementary, slug: bowen-elementary, address: 1601 Roosevelt
       Ave, city: Louisville, state: KY, postal_code: '40242', location: SRID=4326;POINT
-      (-85.581608 38.269904), district: 2, deleted: false}
+      (-85.581608 38.269904), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 102
   fields: {name: Greathouse/Shryock Traditional, slug: greathouseshryock-traditional,
     address: 2700 Browns Ln, city: Louisville, state: KY, postal_code: '40220', location: SRID=4326;POINT
-      (-85.622623 38.226184), district: 2, deleted: false}
+      (-85.622623 38.226184), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 103
   fields: {name: Iroquois High, slug: iroquois-high, address: 4615 Taylor Blvd, city: Louisville,
     state: KY, postal_code: '40215', location: SRID=4326;POINT (-85.781747 38.174487),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 104
   fields: {name: Smyrna Elementary, slug: smyrna-elementary, address: 6401 Outer Loop,
     city: Louisville, state: KY, postal_code: '40228', location: SRID=4326;POINT (-85.640987
-      38.138792), district: 2, deleted: false}
+      38.138792), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 105
   fields: {name: Thomas Jefferson Middle, slug: thomas-jefferson-middle, address: 1501
       Rangeland Rd, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.67935799999999 38.169226), district: 2, deleted: false}
+      (-85.67935799999999 38.169226), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 106
   fields: {name: Ahrens Educational Resource Center, slug: ahrens-educational-resource-center,
     address: 546 S 1st St, city: Louisville, state: KY, postal_code: '40202', location: SRID=4326;POINT
-      (-85.753221 38.249247), district: 2, deleted: false}
+      (-85.753221 38.249247), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 107
   fields: {name: Trunnell Elementary, slug: trunnell-elementary, address: 7609 St
       Andrews Church Rd, city: Louisville, state: KY, postal_code: '40214', location: SRID=4326;POINT
-      (-85.814767 38.152788), district: 2, deleted: false}
+      (-85.814767 38.152788), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 108
   fields: {name: Norton Elementary, slug: norton-elementary, address: 8101 Brownsboro
       Rd, city: Louisville, state: KY, postal_code: '40241', location: SRID=4326;POINT
-      (-85.599771 38.297712), district: 2, deleted: false}
+      (-85.599771 38.297712), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 109
   fields: {name: Doss High, slug: doss-high, address: 7601 St Andrews Church Rd, city: Louisville,
     state: KY, postal_code: '40214', location: SRID=4326;POINT (-85.813272 38.153133),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 110
   fields: {name: Blake Elementary, slug: blake-elementary, address: 3801 Bonaventure
       Blvd, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.694007 38.123365), district: 2, deleted: false}
+      (-85.694007 38.123365), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 111
   fields: {name: Liberty High, slug: liberty-high, address: 3307 E Indian Trl, city: Louisville,
     state: KY, postal_code: '40213', location: SRID=4326;POINT (-85.700183 38.171418),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 112
   fields: {name: Robert Frost Sixth-Grade Academy, slug: robert-frost-sixth-grade-academy,
     address: 4601 Valley Station Rd, city: Louisville, state: KY, postal_code: '40272',
-    location: SRID=4326;POINT (-85.844273 38.108068), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.844273 38.108068), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 113
   fields: {name: Dunn Elementary, slug: dunn-elementary, address: 2010 Rudy Ln, city: Louisville,
     state: KY, postal_code: '40207', location: SRID=4326;POINT (-85.643862 38.284049),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 114
   fields: {name: Jeffersontown Elementary, slug: jeffersontown-elementary, address: 3610
       Cedarwood Way, city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT
-      (-85.583977 38.190366), district: 2, deleted: false}
+      (-85.583977 38.190366), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 115
   fields: {name: King Elementary, slug: king-elementary, address: 4325 Vermont Ave,
     city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT (-85.82343
-      38.257844), district: 2, deleted: false}
+      38.257844), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 116
   fields: {name: Minor Daniels Academy, slug: minor-daniels-academy, address: 1960
       Bashford Manor Ln, city: Louisville, state: KY, postal_code: '40218', location: SRID=4326;POINT
-      (-85.673072 38.197797), district: 2, deleted: false}
+      (-85.673072 38.197797), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 117
   fields: {name: Cochran Elementary, slug: cochran-elementary, address: 500 W Gaulbert
       Ave, city: Louisville, state: KY, postal_code: '40208', location: SRID=4326;POINT
-      (-85.76476099999999 38.224704), district: 2, deleted: false}
+      (-85.76476099999999 38.224704), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 118
   fields: {name: Louisville Male High, slug: louisville-male-high, address: 4409 Preston
       Hwy, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.719156 38.187067), district: 2, deleted: false}
+      (-85.719156 38.187067), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 119
   fields: {name: Central High Magnet Career Academy, slug: central-high-magnet-career-academy,
     address: 1130 W Chestnut St, city: Louisville, state: KY, postal_code: '40203',
-    location: SRID=4326;POINT (-85.770405 38.249752), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.770405 38.249752), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 120
   fields: {name: Home/Hospital, slug: homehospital, address: 3332 Newburg Rd, city: Louisville,
     state: KY, postal_code: '40218', location: SRID=4326;POINT (-85.684996 38.199515),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 121
   fields: {name: Frederick Law Olmsted Academy North, slug: frederick-law-olmsted-academy-north,
     address: 4530 Bellevue Ave, city: Louisville, state: KY, postal_code: '40215',
-    location: SRID=4326;POINT (-85.7745 38.187095), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.7745 38.187095), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 122
   fields: {name: Shacklette Elementary, slug: shacklette-elementary, address: 5310
       Mercury Dr, city: Louisville, state: KY, postal_code: '40258', location: SRID=4326;POINT
-      (-85.854896 38.159223), district: 2, deleted: false}
+      (-85.854896 38.159223), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 123
   fields: {name: St Matthews Elementary, slug: st-matthews-elementary, address: 601
       Browns Ln, city: Louisville, state: KY, postal_code: '40207', location: SRID=4326;POINT
-      (-85.640738 38.245575), district: 2, deleted: false}
+      (-85.640738 38.245575), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 124
   fields: {name: Brandeis Elementary, slug: brandeis-elementary, address: 2817 W Kentucky
       St, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.800894 38.244213), district: 2, deleted: false}
+      (-85.800894 38.244213), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 125
   fields: {name: Wilkerson Elementary School, slug: wilkerson-elementary-school, address: 5601
       Johnsontown Rd, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.873976 38.122822), district: 2, deleted: false}
+      (-85.873976 38.122822), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 126
   fields: {name: Brooklawn, slug: brooklawn, address: 3121 Brooklawn Campus Dr, city: Louisville,
     state: KY, postal_code: '40218', location: SRID=4326;POINT (-85.67443400000001
-      38.208501), district: 2, deleted: false}
+      38.208501), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 127
   fields: {name: Okolona Elementary, slug: okolona-elementary, address: 7606 Preston
       Hwy, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.690055 38.140824), district: 2, deleted: false}
+      (-85.690055 38.140824), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 128
   fields: {name: Johnsontown Road Elementary, slug: johnsontown-road-elementary, address: 7201
       Johnsontown Rd, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.893226 38.117216), district: 2, deleted: false}
+      (-85.893226 38.117216), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 129
   fields: {name: Bates Elementary, slug: bates-elementary, address: 7601 Bardstown
       Rd, city: Louisville, state: KY, postal_code: '40291', location: SRID=4326;POINT
-      (-85.578672 38.137219), district: 2, deleted: false}
+      (-85.578672 38.137219), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 130
   fields: {name: Wilder Elementary, slug: wilder-elementary, address: 1913 Herr Ln,
     city: Louisville, state: KY, postal_code: '40222', location: SRID=4326;POINT (-85.62208699999999
-      38.279025), district: 2, deleted: false}
+      38.279025), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 131
   fields: {name: Fairdale High, slug: fairdale-high, address: 1001 Fairdale Rd, city: Fairdale,
     state: KY, postal_code: '40118', location: SRID=4326;POINT (-85.751632 38.112012),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 132
   fields: {name: Wellington Elementary, slug: wellington-elementary, address: 4800
       Kaufman Ln, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.861845 38.182491), district: 2, deleted: false}
+      (-85.861845 38.182491), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 133
   fields: {name: Atherton High, slug: atherton-high, address: 3000 Dundee Rd, city: Louisville,
     state: KY, postal_code: '40205', location: SRID=4326;POINT (-85.68777 38.214088),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 134
   fields: {name: The Academy @ Shawnee, slug: the-academy-shawnee, address: 4001 Herman
       St, city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT
-      (-85.815692 38.261437), district: 2, deleted: false}
+      (-85.815692 38.261437), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 135
   fields: {name: Field Elementary, slug: field-elementary, address: 120 Sacred Heart
       Ln, city: Louisville, state: KY, postal_code: '40206', location: SRID=4326;POINT
-      (-85.67828799999999 38.252222), district: 2, deleted: false}
+      (-85.67828799999999 38.252222), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 136
   fields: {name: Watson Lane Elementary, slug: watson-lane-elementary, address: 7201
       Watson Ln, city: Louisville, state: KY, postal_code: '40272', location: SRID=4326;POINT
-      (-85.89725799999999 38.061053), district: 2, deleted: false}
+      (-85.89725799999999 38.061053), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 137
   fields: {name: Seneca High, slug: seneca-high, address: 3510 Goldsmith Ln, city: Louisville,
     state: KY, postal_code: '40220', location: SRID=4326;POINT (-85.655074 38.207765),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 138
   fields: {name: Kenwood Elementary, slug: kenwood-elementary, address: 7420 Justan
       Ave, city: Louisville, state: KY, postal_code: '40214', location: SRID=4326;POINT
-      (-85.787249 38.145503), district: 2, deleted: false}
+      (-85.787249 38.145503), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 139
   fields: {name: Heuser Hearing & Language Academy, slug: heuser-hearing-language-academy,
     address: 111 E Kentucky St, city: Louisville, state: KY, postal_code: '40203',
-    location: SRID=4326;POINT (-85.75411 38.239115), district: 2, deleted: false}
+    location: SRID=4326;POINT (-85.75411 38.239115), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 140
   fields: {name: Highland Middle, slug: highland-middle, address: 1700 Norris Pl,
     city: Louisville, state: KY, postal_code: '40205', location: SRID=4326;POINT (-85.706222
-      38.223419), district: 2, deleted: false}
+      38.223419), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 141
   fields: {name: Slaughter Elementary, slug: slaughter-elementary, address: 3805 Fern
       Valley Rd, city: Louisville, state: KY, postal_code: '40219', location: SRID=4326;POINT
-      (-85.691767 38.159006), district: 2, deleted: false}
+      (-85.691767 38.159006), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 142
   fields: {name: Western High, slug: western-high, address: 2501 Rockford Ln, city: Louisville,
     state: KY, postal_code: '40216', location: SRID=4326;POINT (-85.844532 38.177763),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 143
   fields: {name: Maupin Elementary, slug: maupin-elementary, address: 1312 Catalpa
       St, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.802081 38.236229), district: 2, deleted: false}
+      (-85.802081 38.236229), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 144
   fields: {name: Cane Run Elementary, slug: cane-run-elementary, address: 3951 Cane
       Run Rd, city: Louisville, state: KY, postal_code: '40211', location: SRID=4326;POINT
-      (-85.82208 38.209637), district: 2, deleted: false}
+      (-85.82208 38.209637), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 145
   fields: {name: Peace Academy, slug: peace-academy, address: 2020 Newburg Rd, city: Louisville,
     state: KY, postal_code: '40205', location: SRID=4326;POINT (-85.70973600000001
-      38.217421), district: 2, deleted: false}
+      38.217421), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 146
   fields: {name: Knight Middle, slug: knight-middle, address: 9803 Blue Lick Rd, city: Louisville,
     state: KY, postal_code: '40229', location: SRID=4326;POINT (-85.69136399999999
-      38.105199), district: 2, deleted: false}
+      38.105199), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 147
   fields: {name: Hite Elementary, slug: hite-elementary, address: 12408 Old Shelbyville
       Rd, city: Louisville, state: KY, postal_code: '40243', location: SRID=4326;POINT
-      (-85.52388000000001 38.238066), district: 2, deleted: false}
+      (-85.52388000000001 38.238066), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 148
   fields: {name: Farmer Elementary, slug: farmer-elementary, address: 6405 Gellhaus
       Ln, city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT
-      (-85.54597800000001 38.151304), district: 2, deleted: false}
+      (-85.54597800000001 38.151304), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 149
   fields: {name: Cochrane Elementary, slug: cochrane-elementary, address: 2511 Tregaron
       Ave, city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT
-      (-85.57440099999999 38.210045), district: 2, deleted: false}
+      (-85.57440099999999 38.210045), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 150
   fields: {name: Butler Traditional High, slug: butler-traditional-high, address: 2222
       Crums Ln, city: Louisville, state: KY, postal_code: '40216', location: SRID=4326;POINT
-      (-85.815275 38.193114), district: 2, deleted: false}
+      (-85.815275 38.193114), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 151
   fields: {name: Ackerly, slug: ackerly, address: 200 E Chestnut St, city: Louisville,
     state: KY, postal_code: '40202', location: SRID=4326;POINT (-85.750806 38.247846),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 152
   fields: {name: Western Day Treatment, slug: western-day-treatment, address: 1900
       S 7th St, city: Louisville, state: KY, postal_code: '40208', location: SRID=4326;POINT
-      (-85.776533 38.221153), district: 2, deleted: false}
+      (-85.776533 38.221153), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 153
   fields: {name: Greenwood Elementary, slug: greenwood-elementary, address: 5801 Greenwood
       Rd, city: Louisville, state: KY, postal_code: '40258', location: SRID=4326;POINT
-      (-85.86117400000001 38.145414), district: 2, deleted: false}
+      (-85.86117400000001 38.145414), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 154
   fields: {name: Farnsley Middle, slug: farnsley-middle, address: 3400 Lees Ln, city: Louisville,
     state: KY, postal_code: '40216', location: SRID=4326;POINT (-85.858457 38.184352),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 155
   fields: {name: Atkinson Academy, slug: atkinson-academy, address: 2811 Duncan St,
     city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT (-85.797713
-      38.264273), district: 2, deleted: false}
+      38.264273), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 156
   fields: {name: Kammerer Middle, slug: kammerer-middle, address: 7315 Wesboro Rd,
     city: Louisville, state: KY, postal_code: '40222', location: SRID=4326;POINT (-85.619353
-      38.283909), district: 2, deleted: false}
+      38.283909), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 157
   fields: {name: Hawthorne Elementary, slug: hawthorne-elementary, address: 2301 Clarendon
       Ave, city: Louisville, state: KY, postal_code: '40205', location: SRID=4326;POINT
-      (-85.671561 38.218662), district: 2, deleted: false}
+      (-85.671561 38.218662), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 158
   fields: {name: Carrithers Middle, slug: carrithers-middle, address: 4320 Billtown
       Rd, city: Louisville, state: KY, postal_code: '40299', location: SRID=4326;POINT
-      (-85.574844 38.181444), district: 2, deleted: false}
+      (-85.574844 38.181444), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 159
   fields: {name: Ramsey Middle, slug: ramsey-middle, address: 6409 Gellhaus Ln, city: Louisville,
     state: KY, postal_code: '40299', location: SRID=4326;POINT (-85.54678 38.149627),
-    district: 2, deleted: false}
+    district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 160
   fields: {name: Alex R Kennedy Elementary, slug: alex-r-kennedy-elementary, address: 4515
       Taylorsville Rd, city: Louisville, state: KY, postal_code: '40220', location: SRID=4326;POINT
-      (-85.597746 38.220374), district: 2, deleted: false}
+      (-85.597746 38.220374), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 161
   fields: {name: Gilmore Lane Elementary, slug: gilmore-lane-elementary, address: 1281
       Gilmore Ln, city: Louisville, state: KY, postal_code: '40213', location: SRID=4326;POINT
-      (-85.70589699999999 38.179768), district: 2, deleted: false}
+      (-85.70589699999999 38.179768), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 162
   fields: {name: Breckinridge-Franklin Elementary, slug: breckinridge-franklin-elementary,
     address: 1351 Payne St, city: Louisville, state: KY, postal_code: '40206', location: SRID=4326;POINT
-      (-85.724013 38.249213), district: 2, deleted: false}
+      (-85.724013 38.249213), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 163
   fields: {name: The Brook-Dupont, slug: the-brook-dupont, address: 1405 Browns Ln,
     city: Louisville, state: KY, postal_code: '40207', location: SRID=4326;POINT (-85.62751
-      38.235601), district: 2, deleted: false}
+      38.235601), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 164
   fields: {name: Westport Middle, slug: westport-middle, address: 8100 Westport Rd,
     city: Louisville, state: KY, postal_code: '40242', location: SRID=4326;POINT (-85.599852
-      38.275646), district: 2, deleted: false}
+      38.275646), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 165
   fields: {name: Breckinridge Metropolitan High, slug: breckinridge-metropolitan-high,
     address: 1128 E Broadway, city: Louisville, state: KY, postal_code: '40204', location: SRID=4326;POINT
-      (-85.732507 38.243709), district: 2, deleted: false}
+      (-85.732507 38.243709), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 166
   fields: {name: The Academy @ Shawnee Middle School, slug: the-academy-shawnee-middle-school,
     address: 4001 Herman St, city: Louisville, state: KY, postal_code: '40212', location: SRID=4326;POINT
-      (-85.815692 38.261437), district: 2, deleted: false}
+      (-85.815692 38.261437), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
 - model: districts.building
   pk: 167
   fields: {name: U OF L Pact Program, slug: u-of-l-pact-program, address: 102 Davidson
       Hall, city: Louisville, state: KY, postal_code: '40243', location: SRID=4326;POINT
-      (-85.758498 38.218223), district: 2, deleted: false}
+      (-85.758498 38.218223), district: 2, created_at: '2018-09-21 21:42:00.264807+00:00', modified_at: '2018-09-21 21:42:00.264807+00:00'}
