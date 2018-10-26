@@ -1,5 +1,8 @@
+import datetime
+
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.translation import gettext as _
 from hamcrest import assert_that, has_key
 
@@ -59,7 +62,7 @@ class LoginFormTests(TestCase):
             name="Test district3",
             email_domain="example3.com",
             uri="https://example3.com",
-            deleted=True,
+            deleted_at=timezone.now() - datetime.timedelta(minutes=1),
         )
         data = {"email": "jane@example3.com"}
         form = LoginForm(data)
@@ -70,7 +73,7 @@ class LoginFormTests(TestCase):
             name="Test district3",
             email_domain="example3.com",
             uri="https://example3.com",
-            deleted=True,
+            deleted_at=timezone.now() - datetime.timedelta(minutes=1),
         )
         data = {"email": "jane@example3.com"}
         response = self.client.post(reverse("noauth:login"), data)

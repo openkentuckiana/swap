@@ -104,7 +104,6 @@ class Item(SoftDeleteModel):
     description = models.TextField(blank=True, null=True)
     location = models.ForeignKey("districts.Building", on_delete=models.CASCADE)
     owner = models.ForeignKey("noauth.User", on_delete=models.CASCADE)
-    deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.name}"

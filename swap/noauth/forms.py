@@ -14,7 +14,7 @@ class LoginForm(forms.Form):
         domain = email.split("@")[1]
         try:
             self.cleaned_data["district"] = District.objects.get(
-                email_domain=domain, deleted=False
+                email_domain=domain, deleted_at=None
             )
         except ObjectDoesNotExist:
             raise forms.ValidationError(
