@@ -18,13 +18,15 @@ from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from PIL import Image
 
+from lib.models import BaseModel, SoftDeleteModel
+
 
 def generate_file_path(instance, filename):
     """Generates a file upload path."""
     return f'uploads/{datetime.datetime.utcnow().strftime("%Y/%m/%d")}/{filename}'
 
 
-class ItemImage(models.Model):
+class ItemImage(BaseModel):
     image = models.ImageField(upload_to=generate_file_path)
     item = models.ForeignKey("Item", on_delete=models.CASCADE)
     full_size_height = models.PositiveIntegerField(default=0)
@@ -96,13 +98,12 @@ def delete_thumbnails(sender, instance, using, **kwargs):
         default_storage.delete(f"{instance.image.path.split('.')[0]}-{size}.jpg")
 
 
-class Item(models.Model):
+class Item(SoftDeleteModel):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, max_length=60)
     description = models.TextField(blank=True, null=True)
     location = models.ForeignKey("districts.Building", on_delete=models.CASCADE)
     owner = models.ForeignKey("noauth.User", on_delete=models.CASCADE)
-    deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.name}"
