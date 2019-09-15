@@ -1,7 +1,7 @@
 Swap - Collaboraive Educator Marketplace
 ===============
 
-[![Build Status](https://travis-ci.com/codeforkyana/swap.svg?branch=master)](https://travis-ci.com/codeforkyana/swap) [![codecov](https://codecov.io/gh/codeforkentuckiana/swap/branch/master/graph/badge.svg?token=0nA3LW7RQO)](https://codecov.io/gh/codeforkentuckiana/swap)
+[![Build Status](https://travis-ci.com/codeforkyana/swap.svg?branch=master)](https://travis-ci.com/codeforkyana/swap) [![codecov](https://codecov.io/gh/codeforkyana/swap/branch/master/graph/badge.svg)](https://codecov.io/gh/codeforkyana/swap)
 
 About
 -----------------
